@@ -1,0 +1,55 @@
+.addFolderDiv {
+    width: 400px;
+    /* width of the div */
+    height: 200px;
+    /* height of the div */
+    border: 1px solid rgb(120, 118, 118);
+    /* border width, style, and color */
+    display: flex;
+    justify-content: center;
+    /* horizontal centering */
+    align-items: center;
+    /* vertical centering */
+}
+
+.inputFolder {
+    width: 250px;
+    /* sets the input width */
+    height: 20px;
+    /* sets the input height */
+    font-size: 16px;
+    /* controls the text size inside */
+    padding: 5px 10px;
+    /* optional: adds space inside the box */
+}
+
+.createFolderButton {
+    border-radius: 12px;
+    background-color: #262928;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 10px 1px;
+    cursor: pointer;
+}
+
+.cancelFolderButton {
+    border-radius: 12px;
+    /* background-color: #262928; */
+    /* Green */
+    border: 2px solid #e7e7e7;
+    /* color: white; */
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 10px 1px;
+    cursor: pointer;
+
+}
