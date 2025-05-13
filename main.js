@@ -1,8 +1,29 @@
 const inputFeatureName = document.getElementById("inputFeatureName");
-const Steps = [];  //step objects array
-const Results = [];  //results objects array
+const Steps = [];
+const Results = [];
 
-class Project { // class Project contains folder objects array
+
+// Toggle sidebar on mobile
+const toggleButton = document.getElementById('toggleSidebar');
+const sidebar = document.getElementById('sidebar');
+
+toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+});
+
+// Close sidebar when clicking outside on mobile
+document.addEventListener('click', (event) => {
+    const isClickInsideSidebar = sidebar.contains(event.target);
+    const isClickOnToggleButton = toggleButton.contains(event.target);
+
+    if (!isClickInsideSidebar && !isClickOnToggleButton && window.innerWidth <= 768) {
+        sidebar.classList.remove('open');
+    }
+});
+
+
+
+class Project {
     constructor() {
         this.folders = [];
     }
@@ -18,6 +39,10 @@ class Folder { // class Folder contains testCase objects array
     constructor() {
         this.testCase = [];
     }
+
+    addTestCase() {
+
+    }
 }
 
 class TestCase { // class TestCase contains the fields testName and testDescription
@@ -27,9 +52,13 @@ class TestCase { // class TestCase contains the fields testName and testDescript
     }
 }
 
-class Step { // class Spet contain stepDescription field 
+class Step {
     constructor(stepDescription) {
         this.stepDescription = stepDescription;
+    }
+
+    addStep() {
+
     }
 }
 
